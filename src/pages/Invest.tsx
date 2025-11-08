@@ -1,5 +1,5 @@
 import { investProducts } from '../ecosystems/invest'
-import { TrendingUp, Zap, Shield } from 'lucide-react'
+import { TrendingUp, Zap } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 export default function Invest() {
