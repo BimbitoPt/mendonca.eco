@@ -1,20 +1,21 @@
 export const sentinelProducts = [
   {
-    name: 'Sentinel One',
-    tagline: 'Antivírus IA que aprende com cada ameaça',
-    status: 'Lançado',
-    link: 'https://sentinel.mendonca.eco',
+    name: "MendoncaScan",
+    tagline:
+      "ferramenta inteligente de deteção de vulnerabilidades em desktops e servidores",
+    status: "Lançado",
+    link: "https://mendoncascan.vercel.app/",
   },
   {
-    name: 'DarkScan',
-    tagline: 'Scanner de dark web 24/7 para dados vazados',
-    status: 'Beta Fechado',
-    link: '#',
+    name: "DarkScan",
+    tagline: "Scanner de dark web 24/7 para dados vazados",
+    status: "Beta Fechado",
+    link: "#",
   },
   {
-    name: 'PhishGuard',
-    tagline: 'IA que detecta phishing em tempo real no email',
-    status: 'Em desenvolvimento',
-    link: '#',
+    name: "PhishGuard",
+    tagline: "IA que detecta phishing em tempo real no email",
+    status: "Em desenvolvimento",
+    link: "#",
   },
-]
+];
