@@ -1,20 +1,8 @@
 export const investProducts = [
   {
-    name: 'Quantum Alpha',
-    tagline: 'Bot de trading que opera em 12 exchanges simultaneamente',
+    name: 'MendonçaTrade',
+    tagline: 'Plataforma de trading inteligente com sinais em tempo real e dashboards avançados.',
     status: 'Lançado',
-    link: 'https://invest.mendonca.eco',
-  },
-  {
-    name: 'DeFi Sentinel',
-    tagline: 'Monitor de liquidez + sniper de novas pools',
-    status: 'Lançado',
-    link: '#',
-  },
-  {
-    name: 'AlphaVault',
-    tagline: 'Carteira fria com recuperação via IA',
-    status: 'Em breve',
-    link: '#',
+    link: 'https://mendoncatrade.vercel.app/',
   },
 ]
