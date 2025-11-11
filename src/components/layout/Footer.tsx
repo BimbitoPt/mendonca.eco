@@ -35,13 +35,13 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">Social</h4>
             <div className="flex gap-4">
-              <a href="https://github.com" className="glass p-3 hover:bg-neon/20 transition">
+              <a href="https://github.com/BimbitoPt" className="glass p-3 hover:bg-neon/20 transition">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="https://twitter.com" className="glass p-3 hover:bg-sky/20 transition">
+              <a href="https://x.com/BimbitoPt1" className="glass p-3 hover:bg-sky/20 transition">
                 <Twitter className="w-6 h-6" />
               </a>
-              <a href="https://mendonca.eco" className="glass p-3 hover:bg-purple/20 transition">
+              <a href="https://mendonca-eco.vercel.app/" className="glass p-3 hover:bg-purple/20 transition">
                 <Globe className="w-6 h-6" />
               </a>
             </div>
