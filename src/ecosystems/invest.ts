@@ -9,7 +9,7 @@ export const investProducts = [
   {
     name: "MendonçaWallet",
     tagline: "Tudo o que possuis, num só lugar",
-    status: "Desenvolvimento",
-    link: "#",
+    status: "Lançado",
+    link: "https://mendonca-wallet.vercel.app/",
   },
 ];
