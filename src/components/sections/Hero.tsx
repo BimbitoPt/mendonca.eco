@@ -1,7 +1,15 @@
-import { motion } from 'framer-motion'
-import { ArrowDown } from 'lucide-react'
+import { motion } from "framer-motion";
+import { ArrowDown } from "lucide-react";
 
 export default function Hero() {
+  const scrollToEcosystems = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const element = document.getElementById("ecosystems");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <video
@@ -11,7 +19,7 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full object-cover opacity-20"
         src="/hero-bg.mp4"
       />
-      
+
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
 
       <div className="relative z-10 text-center px-6">
@@ -39,11 +47,11 @@ export default function Hero() {
           transition={{ delay: 0.8 }}
           className="mt-12"
         >
-          <a href="#ecosystems">
+          <button onClick={scrollToEcosystems} className="cursor-pointer">
             <ArrowDown className="w-12 h-12 mx-auto animate-bounce text-neon" />
-          </a>
+          </button>
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

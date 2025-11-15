@@ -1,6 +1,7 @@
-import { investProducts } from '../ecosystems/invest'
-import { TrendingUp, Zap } from 'lucide-react'
-import { motion } from 'framer-motion'
+import { investProducts } from "../ecosystems/invest";
+import { TrendingUp, Zap } from "lucide-react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function Invest() {
   return (
@@ -25,28 +26,68 @@ export default function Invest() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {investProducts.map((product, i) => (
-            <motion.a
+            <motion.div
               key={product.name}
-              href={product.link}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
-              className="glass p-8 hover:border-purple/50 transition-all group relative overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-purple/10 to-pink-500/5 opacity-0 group-hover:opacity-100 transition" />
-              <h3 className="text-2xl font-bold mb-2 relative z-10">{product.name}</h3>
-              <p className="text-gray-400 mb-4 relative z-10">{product.tagline}</p>
-              <span className={`text-sm px-3 py-1 rounded-full relative z-10 ${
-                product.status === 'Lançado' ? 'bg-purple/20 text-purple' :
-                product.status === 'Beta Fechado' ? 'bg-yellow-500/20 text-yellow-400' :
-                'bg-gray-500/20 text-gray-400'
-              }`}>
-                {product.status}
-              </span>
-            </motion.a>
+              {/* Check if link is external or internal */}
+              {product.link.startsWith("http") ? (
+                <a
+                  href={product.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass p-8 hover:border-purple/50 transition-all group relative overflow-hidden block"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple/10 to-pink-500/5 opacity-0 group-hover:opacity-100 transition" />
+                  <h3 className="text-2xl font-bold mb-2 relative z-10">
+                    {product.name}
+                  </h3>
+                  <p className="text-gray-400 mb-4 relative z-10">
+                    {product.tagline}
+                  </p>
+                  <span
+                    className={`text-sm px-3 py-1 rounded-full relative z-10 ${
+                      product.status === "Lançado"
+                        ? "bg-purple/20 text-purple"
+                        : product.status === "Beta Fechado"
+                        ? "bg-yellow-500/20 text-yellow-400"
+                        : "bg-gray-500/20 text-gray-400"
+                    }`}
+                  >
+                    {product.status}
+                  </span>
+                </a>
+              ) : (
+                <Link
+                  to={product.link}
+                  className="glass p-8 hover:border-purple/50 transition-all group relative overflow-hidden block"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple/10 to-pink-500/5 opacity-0 group-hover:opacity-100 transition" />
+                  <h3 className="text-2xl font-bold mb-2 relative z-10">
+                    {product.name}
+                  </h3>
+                  <p className="text-gray-400 mb-4 relative z-10">
+                    {product.tagline}
+                  </p>
+                  <span
+                    className={`text-sm px-3 py-1 rounded-full relative z-10 ${
+                      product.status === "Lançado"
+                        ? "bg-purple/20 text-purple"
+                        : product.status === "Beta Fechado"
+                        ? "bg-yellow-500/20 text-yellow-400"
+                        : "bg-gray-500/20 text-gray-400"
+                    }`}
+                  >
+                    {product.status}
+                  </span>
+                </Link>
+              )}
+            </motion.div>
           ))}
         </div>
       </div>
     </div>
-  )
+  );
 }
